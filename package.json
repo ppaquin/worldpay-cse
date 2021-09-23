@@ -1,0 +1,43 @@
+{
+  "description": "WorldPay Client Side Encryption client library",
+  "name": "worldpay-cse",
+  "version": "1.0.2",
+  "homepage": "https://github.com/ppaquin/worldpay-cse#readme",
+  "bugs": "https://github.com/ppaquin/worldpay-cse/issues",
+  "contributors": [
+    {
+      "name": "Pierre-Luc Paquin",
+      "email": "ppaquin@provenancetech.io",
+      "url": "https://github.com/ppaquin"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ppaquin/worldpay-cse.git"
+  },
+  "scripts": {
+    "build": "scripts/build.js",
+    "cleanup": "scripts/cleanup.js",
+    "postinstall": "scripts/postinstall.js",
+    "publish-package": "yarn build && scripts/prepublish.js && yarn publish dist --new-version 1.0.2 --access public"
+  },
+  "dependencies": {
+    "worldpay": "git://github.com/ppaquin/worldpay-cse-lib-javascript.git"
+  },
+  "devDependencies": {
+    "cross-spawn": "^7.0.3",
+    "fs-extra": "^10.0.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^1.4.3",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-compress": "^0.13.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-html-build": "^0.5.0",
+    "grunt-jsdoc": "^0.6.7",
+    "grunt-maven-deploy": "^0.2.1",
+    "grunt-qunit-istanbul": "^0.5.0",
+    "grunt-qunit-junit": "^0.3.1",
+    "grunt-text-replace": "^0.4.0"
+  }
+}
